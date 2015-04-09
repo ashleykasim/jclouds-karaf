@@ -19,7 +19,7 @@ limitations under the License.
 
 
     <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.1.0">
-        <command name="jclouds/node-create">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeCreateCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -36,7 +36,7 @@ limitations under the License.
                 <entry key="--recipe" value-ref="recipeCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-destroy">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeDestroyCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -50,7 +50,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-destroy-all">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeDestroyAllCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -61,7 +61,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/group-destroy">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.GroupDestroyCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -75,7 +75,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-suspend">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeSuspendCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -89,7 +89,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-resume">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeResumeCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -102,7 +102,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-runscript">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeRunScriptCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -117,7 +117,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/node-info">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeInfoCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -132,7 +132,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/group-runscript">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.GroupRunScriptCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -142,7 +142,7 @@ limitations under the License.
                 <null/>
             </completers>
         </command>
-        <command name="jclouds/provider-info">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ProviderInfoCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -153,13 +153,13 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/compute-service-list">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ComputeServiceListCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
             </action>
         </command>
-        <command name="jclouds/compute-service-create">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ComputeServiceCreateCommand">
                 <property name="bundleContext" ref="blueprintBundleContext"/>
                 <property name="configAdmin" ref="configAdmin"/>
@@ -169,7 +169,7 @@ limitations under the License.
               <entry key="--api" value-ref="availableComputeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/compute-service-destroy">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ComputeServiceDestroyCommand">
                 <property name="configAdmin" ref="configAdmin"/>
             </action>
@@ -179,13 +179,13 @@ limitations under the License.
             </completers>
         </command>
 
-        <command name="jclouds/blobstore-service-list">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobStoreServiceListCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
             </action>
         </command>
-        <command name="jclouds/blobstore-service-create">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobStoreServiceCreateCommand">
                 <property name="bundleContext" ref="blueprintBundleContext"/>
                 <property name="configAdmin" ref="configAdmin"/>
@@ -195,7 +195,7 @@ limitations under the License.
                 <entry key="--api" value-ref="availableBlobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-service-destroy">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobStoreServiceDestroyCommand">
                 <property name="configAdmin" ref="configAdmin"/>
             </action>
@@ -204,7 +204,7 @@ limitations under the License.
                 <null/>
             </completers>
         </command>
-        <command name="jclouds/node-list">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.NodeListCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -217,7 +217,7 @@ limitations under the License.
                 <entry key="--group" value-ref="groupCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/hardware-list">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.HardwareListCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -229,7 +229,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/location-list">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.LocationListCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -241,7 +241,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/image-list">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ImageListCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -253,7 +253,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/image-create">
+        <command>
             <action class="org.jclouds.karaf.commands.compute.ImageCreateCommand">
                 <property name="computeServices" ref="computeServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -268,7 +268,7 @@ limitations under the License.
                 <entry key="--api" value-ref="computeApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-write">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobWriteCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -285,7 +285,7 @@ limitations under the License.
             </optional-completers>
         </command>
 
-        <command name="jclouds/blobstore-blob-exists">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobExistsCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -301,7 +301,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-read">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobReadCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -317,7 +317,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-list">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobListCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -328,7 +328,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-metadata">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobMetadataCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -339,7 +339,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-clear">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerClearCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -353,7 +353,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-list">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerListCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -367,7 +367,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-metadata">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerMetadataCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -381,7 +381,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-exists">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerExistsCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -395,7 +395,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-create">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerCreateCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -407,7 +407,7 @@ limitations under the License.
                 <entry key="--location" value-ref="locationCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-container-delete">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.ContainerDeleteCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -421,7 +421,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-location-list">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.LocationListCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
@@ -432,7 +432,7 @@ limitations under the License.
                 <entry key="--api" value-ref="blobStoreApiCompleter"/>
             </optional-completers>
         </command>
-        <command name="jclouds/blobstore-remove">
+        <command>
             <action class="org.jclouds.karaf.commands.blobstore.BlobRemoveCommand">
                 <property name="blobStoreServices" ref="blobStoreServices"/>
                 <property name="cacheProvider" ref="cacheProvider"/>
